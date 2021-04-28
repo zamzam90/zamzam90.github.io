@@ -1,0 +1,139 @@
+/* asetetaan sivunpituus 100% */
+html,
+body {
+  min-height: 100vh;
+}
+/* käytetään flexboxia(saadaan footer alas ilman turhia br */
+body {
+  /* piilotetaan scrollbar(niin että se kuitenkin toimii) */
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox, ei toimi?! */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  /* scrollbar piilossa mutta toiminnassa */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  margin: 2px;
+  font: 16px Sans-Serif;
+}
+/* scrollbar piilotus */
+body::-webkit-scrollbar {
+  /* WebKit, Chrome..*/
+  width: 0;
+  height: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* Headerin muotoilut
+ei kasva eikä kutistu */
+header {
+  background-color: #34495e;
+  font-size: x-large;
+  width: 65%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px 5px 0 0;
+  border-top: thin solid black;
+  border-left: thin solid black;
+  border-right: thin solid black;
+  flex: 0 0 auto;
+}
+header > h1 {
+  text-align: center;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  color: #05c46b;
+  font-family: "Dancing Script", cursive;
+}
+/* Sisällön muotoilu
+kasvaa footeriin asti automaattisesti */
+#content {
+  background-color: #2c3e50;
+  color: darkgray;
+  font-family: "New Tegomin", serif;
+  text-align: center;
+  padding: 10px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0 0 5px 5px;
+  border-left: thin solid black;
+  border-right: thin solid black;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Itse laskimen muotoilua... */
+#laskin {
+  /*
+  border: 20px solid #242424;
+  border-radius: 10px;*/
+  border-collapse: collapse;
+}
+#laskin td {
+  width: 100px;
+  height: 100px;
+  background-color: #1e272e;
+  border: 3px solid black;
+  text-align: center;
+}
+#laskin-otsikko td {
+  color: #dfe6e9;
+  height: 55px;
+}
+button {
+  width: 65px;
+  height: 65px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+}
+/* poistetaan napilta ulkoreunat focus tilassa */
+button:focus {
+  outline: none;
+}
+#näyttö {
+  color: #dfe6e9;
+  font-size: x-large;
+  font-weight: 500;
+  background-color: #2d3436 !important;
+  /*****ettei näyttö veny*****/
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  /***************************/
+}
+.operator {
+  background-color: #fdcb6e !important;
+}
+.number {
+  background-color: #1e272e;
+}
+#plus,
+#equals {
+  height: 130px !important;
+}
+#zero {
+  width: 130px !important;
+}
+/* ..laskimen muotoiluja */
+/* Footerin muotoilu
+pakotetaan footer alas(shrink 0) */
+footer {
+  flex: 0 1 auto;
+}
+footer > p {
+  color: black;
+  text-shadow: 0 0 8px white, 0 0 8px #1abc9c;
+  text-align: center;
+  font-family: monospace;
+  padding: 10px 0 10px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
