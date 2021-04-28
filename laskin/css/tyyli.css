@@ -1,10 +1,16 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /* asetetaan sivunpituus 100% */
-html,
-body {
-  min-height: 100vh;
+html {
+  height: 100vh;
 }
 /* käytetään flexboxia(saadaan footer alas ilman turhia br */
 body {
+  min-height: 100vh;
   /* piilotetaan scrollbar(niin että se kuitenkin toimii) */
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox, ei toimi?! */
@@ -23,16 +29,13 @@ body::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
-* {
-  box-sizing: border-box;
-}
 /* Headerin muotoilut
 ei kasva eikä kutistu */
 header {
   background-color: #34495e;
   font-size: x-large;
   width: 65%;
-  margin-top: 2%;
+  margin-top: 0.5em;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px 5px 0 0;
@@ -41,7 +44,8 @@ header {
   border-right: thin solid black;
   flex: 0 0 auto;
 }
-header > h1 {
+header > h1,
+header > p {
   text-align: center;
   text-shadow: 2px 2px rgb(0, 0, 0);
   color: #05c46b;

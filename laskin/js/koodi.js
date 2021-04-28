@@ -1,12 +1,15 @@
 //Das Laskin..
 /* 
-TODO: estää ","" käyttö useammin kuin kerran(nyt ei saa peräkkäin mutta esim 6,66, onnistuu..), estää operaattorin syöttäminen _ensimmäisenä_, % operaattori, laskin toimii numpädistä, muotoilu&värit..
+TODO: 
+  -estää ","" käyttö useammin kuin kerran(nyt ei saa peräkkäin mutta esim '6,66,' onnistuu..
+  -estää operaattorin syöttäminen _ensimmäisenä_?
+  -% operaattori
 */
 console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
 var tulos = "",
   luku = "",
-  tyhjätty = "Klikkaile nappuloita!",
+  tyhjätty = "0",
   deleteBtn = document.getElementById("delete"),
   divideBtn = document.getElementById("divide"),
   multiplyBtn = document.getElementById("multiply"),
@@ -88,3 +91,63 @@ function alusta() {
   tulos = "";
   document.getElementById("näyttö").innerHTML = tyhjätty;
 }
+/* laskin toimii numpadista,
+eventlistenerit.. https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code */
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if event already handled
+  }
+  switch (event.code) {
+    case "Backspace":
+      poista();
+      break;
+    case "NumpadDivide":
+      lisää(divideBtn.value);
+      break;
+    case "NumpadMultiply":
+      lisää(multiplyBtn.value);
+      break;
+    case "NumpadSubtract":
+      lisää(minusBtn.value);
+      break;
+    case "Numpad7":
+      lisää(sevenBtn.value);
+      break;
+    case "Numpad8":
+      lisää(eightBtn.value);
+      break;
+    case "Numpad9":
+      lisää(nineBtn.value);
+      break;
+    case "NumpadAdd":
+      lisää(plusBtn.value);
+      break;
+    case "Numpad4":
+      lisää(fourBtn.value);
+      break;
+    case "Numpad5":
+      lisää(fiveBtn.value);
+      break;
+    case "Numpad6":
+      lisää(sixBtn.value);
+      break;
+    case "Numpad1":
+      lisää(oneBtn.value);
+      break;
+    case "Numpad2":
+      lisää(twoBtn.value);
+      break;
+    case "Numpad3":
+      lisää(threeBtn.value);
+      break;
+    case "NumpadEnter":
+      kalkuloi();
+      break;
+    case "Numpad0":
+      lisää(zeroBtn.value);
+      break;
+    case "NumpadDecimal":
+      lisää(dotBtn.value);
+      break;
+  }
+});
