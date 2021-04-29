@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>See keyboard codes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="bg-light text-center">
+      <h1>See keyboardevent keycodes!</h1>
+    </header>
+    <section class="bg-dark">
+      <div class="container">
+        <div class="split">
+          <div>
+            <p>Press a key to see it's keycode!</p>
+          </div>
+          <div>
+            <p>
+              Source
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code"
+                >MDN</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-primary">
+      <div class="container">
+        <div class="split">
+          <div>
+            <label for="key">You're pressing: </label
+            ><input
+              name="key"
+              id="key"
+              type="text"
+              placeholder="key"
+              value=""
+            />
+          </div>
+          <div>
+            <label for="code">Its keycode is: </label
+            ><input
+              name="code"
+              id="code"
+              type="text"
+              placeholder="keycode"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-light text-center">
+      <div class="container--footer">
+        <p>Sami Siltanen - 2021</p>
+      </div>
+    </footer>
+  </body>
+</html>
