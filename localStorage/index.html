@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Yellowtail&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="addToLS.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+      <header class="text-center">
+          <h1>LocalStorage testailua..</h1>
+      </header>
+        <section class="bg-neutral">
+          <!-- tähän kyselylomake ja nappi josta tiedot menee localstorageen, toiselle sivulle? sitten tietojen "haku" ja näyttäminen -->
+          <div class="container">
+            <div class="container container--narrow">
+              <h2 class="text-center">Täytä tiedot ja lopuksi paina tallenna</h2>
+            </div>
+            <form id="localStorageForm" action="./details.html">
+              <div class="split">
+                <div>
+                  <div>
+                    <label for="lsFirstName">Etunimi: </label>
+                    <input type="text" name="Etunimi" id="lsFirstName" value=""/>
+                  </div>
+                  <div>
+                    <label for="lsLastName">Sukunimi: </label>
+                    <input type="text" name="Sukunimi" id="lsLastName" value=""/>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <label for="lsAddress">Lähiosoite: </label>
+                    <input type="text" name="Lähiosoite" id="lsAddress" value=""/>
+                  </div>
+                  <div>
+                    <label for="lsPostNumber">Postinumero: </label>
+                    <input type="number" name="Postinumero" id="lsPostNumber" value=""/>
+                  </div>
+                  <div>
+                    <label for="lsPostiToimiPaikka">Postitoimipaikka: </label>
+                    <input type="text" name="Postitoimipaikka" id="lsPostiToimiPaikka" value=""/>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <label for="lsPuhelinNro"></label>Puhelinnumero: </label
+                    ><input type="number" name="Puhelinnumero" id="lsPuhelinNro" value=""/>
+                  </div>
+                  <div>
+                    <label for="lsSahkoPosti">Sähköpostiosoite: </label>
+                    <input type="email" name="Sähköpostiosoite" id="lsSahkoPosti" value=""/>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button type="submit" onclick="return tallennaTiedot();">Tallenna</button> <button onclick="return reDirect();">Katsele tietoja</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      <footer class="text-center">
+        <p>Sami Siltanen &copy; 2021</p>
+      </footer>
+  </body>
+</html>

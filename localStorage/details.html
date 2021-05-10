@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="readFromLS.js" defer></script>
+    <!-- eri js tiedosto? -->
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="text-center">
+      <h1>LocalStorage testailua..</h1>
+    </header>
+    <section class="bg-neutral">
+      <!-- tänne localstorage tietojen näyttäminen ja nappi/linkki takaisin etusivulle:
+          js, hakea tiedot localstoragesta, tulostaa ne sivulle, mahdollisuus poistaa yksittäinen / kaikki tiedot?
+          html, "palaa lomakkeeseen" nappi?
+      -->
+      <div class="container text-center">
+        <p>
+          tähän tiedot näkymään ja nappi jolla tyhjentää tieto(tai kaikki
+          tiedot)?
+        </p>
+        <div>
+          <button id="listaaBtn" onclick="return listaa();">
+            Näytä tiedot
+          </button>
+          <button id="tyhjääLSkokonaan" onclick="return tyhjääLocalStorage();">
+            Tyhjennä localStorage
+          </button>
+        </div>
+        <fieldset>
+          <legend>localStorage items:</legend>
+          <div id="infoArea"></div>
+        </fieldset>
+      </div>
+    </section>
+    <footer class="text-center">
+      <p>Sami Siltanen &copy; 2021</p>
+    </footer>
+  </body>
+</html>
