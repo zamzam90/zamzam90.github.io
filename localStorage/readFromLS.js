@@ -25,9 +25,11 @@ function listaa() {
     // hae avain localStoragesta
     printKey = localStorage.key(x);
     console.log(printKey);
-    printToHTML += "<tr><th colspan='2'>";
-    printToHTML += printKey;
-    printToHTML += "</th></tr>";
+    printToHTML += "<tr><th>" + printKey + "</th>";
+    printToHTML +=
+      "<th><button type='button' id='" +
+      printKey +
+      "' onclick='poistaAvain(this)'>Poista tieto</button></th></tr>";
     // hae avaimella arvo(olio) localStoragesta
     printValue = JSON.parse(localStorage.getItem(printKey));
     console.log(printValue);
@@ -51,6 +53,14 @@ function listLSitems() {
   console.log(localStorage);
 }
 
+/* Funktio joka poistaa avaimen(&arvon, daa) localStoragesta */
+function poistaAvain(key) {
+  const avain = key.id;
+  console.log("poistetaan: " + avain);
+  localStorage.removeItem(avain);
+  listaa(); // "päivitetään" näkymä
+}
+
 /* Funktio joka tyhjentää localStoragen, KOKONAAN */
 function tyhjääLocalStorage() {
   if (confirm("Haluatko varmasti tyhjentää kaiken localStoragesta!")) {
@@ -59,4 +69,11 @@ function tyhjääLocalStorage() {
   } else {
     alert("localStoragesta ei poistettu mitään.");
   }
+}
+
+function reDirect() {
+  console.log("redirecting to index.html...");
+  setTimeout(function () {
+    window.location.href = "./index.html";
+  }, 500);
 }

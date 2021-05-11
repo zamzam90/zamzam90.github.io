@@ -28,10 +28,7 @@
           html, "palaa lomakkeeseen" nappi?
       -->
       <div class="container text-center">
-        <p>
-          tähän tiedot näkymään ja nappi jolla tyhjentää tieto(tai kaikki
-          tiedot)?
-        </p>
+        <p>Tässä näet localStoragessa olevat tiedot.</p>
         <div>
           <button id="listaaBtn" onclick="return listaa();">
             Näytä tiedot
@@ -44,6 +41,7 @@
           <legend>localStorage items:</legend>
           <div id="infoArea"></div>
         </fieldset>
+        <p><button onclick="reDirect();">Takaisin etusivulle</button></p>
       </div>
     </section>
     <footer class="text-center">
