@@ -1,3 +1,14 @@
+/* Header greeter juttu */
+var myDate = new Date();
+var hrs = myDate.getHours();
+var greet;
+if (hrs < 12) greet = "Hyvää huomenta!";
+else if (hrs >= 12 && hrs <= 17) greet = "Hyvää päivää";
+else if (hrs >= 17 && hrs <= 24) greet = "Hyvää iltaa";
+
+document.getElementById("greeter").innerHTML =
+  greet + " tervetuloa kuvagalleriaan!";
+
 /* automaaginen slideshow
     https://www.w3schools.com/howto/howto_js_slideshow.asp
 */
