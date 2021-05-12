@@ -84,10 +84,10 @@ footer {
   max-width: 25rem;
 }
 
-/* Slideshow stuff 
+/* start Slideshow stuff 
 https://www.w3schools.com/howto/howto_js_slideshow.asp
 */
-.slideshow-container {
+.slideShow-container {
   position: relative;
 }
 
@@ -121,9 +121,9 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp
     opacity: 1;
   }
 }
-/* Slideshow stuff */
+/* Slideshow stuff end*/
 
-/* grid gallery stuff 
+/* start grid gallery stuff 
 https://www.youtube.com/watch?v=705XCEruZFs
 */
 .image-grid {
@@ -134,7 +134,21 @@ https://www.youtube.com/watch?v=705XCEruZFs
   /* grid-auto-rows: 280px; */
 }
 
-/* grid gallery stuff */
+.grid-image > img {
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms ease;
+}
+
+.grid-image:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.1);
+}
+/* grid gallery stuff end*/
 
 fieldset {
   font-family: var(--ff-primary);
@@ -146,6 +160,7 @@ legend {
   color: var(--clr-light-300);
 }
 
+/* start Link stuff */
 /* unvisited link */
 a:link {
   color: var(--clr-link-unvisited);
@@ -165,3 +180,4 @@ a:hover {
 a:active {
   color: var(--clr-ligth-400);
 }
+/* Link stuff end*/
