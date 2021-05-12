@@ -9,10 +9,13 @@ TODO:
 var myDate = new Date(); //haetaan päivämäärä muuttujaan
 var hrs = myDate.getHours(); //haetaan muuttujasta tunnit
 var greet;
-if (hrs < 12) greet = "Hyvää huomenta!";
-else if (hrs >= 12 && hrs <= 17) greet = "Hyvää päivää";
-else if (hrs >= 17 && hrs <= 24) greet = "Hyvää iltaa";
-
+if (hrs < 12) {
+  greet = "Hyvää huomenta!";
+} else if (hrs >= 12 && hrs <= 16) {
+  greet = "Hyvää päivää";
+} else if (hrs >= 17 && hrs <= 24) {
+  greet = "Hyvää iltaa";
+}
 document.getElementById("greeter").innerHTML =
   greet + " tervetuloa kuvagalleriaan!";
 
@@ -22,9 +25,9 @@ document.getElementById("greeter").innerHTML =
     https://www.w3schools.com/howto/howto_js_slideshow.asp
 */
 var slideIndex = 0;
-showSlides();
+slideShow();
 
-function showSlides() {
+function slideShow() {
   var i;
   var slides = document.getElementsByClassName("slide"); // haetaan kaikki slide luokan omaavat elementit
   for (i = 0; i < slides.length; i++) {
@@ -36,6 +39,6 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block"; // vaihdetaan slide elementin style blockiksi = näytetään kuva
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(slideShow, 2000); // Change image every 2 seconds
 }
 /* slideshow stuff end */
