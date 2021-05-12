@@ -6,6 +6,9 @@
   --clr-light-300: #1abc9c;
   --clr-ligth-400: #16a085;
 
+  --clr-link-unvisited: #2ecc71;
+  --clr-link-visited: #27ae60;
+
   --ff-accent: "Permanent Marker", cursive;
   --ff-primary: "Roboto", sans-serif;
   --ff-footer: "Yellowtail", cursive;
@@ -20,6 +23,7 @@
 body {
   min-height: 100vh;
   background-color: var(--clr-dark);
+  color: var(--clr-ligth-400);
   font-family: var(--ff-primary);
   font-weight: 400;
   font-size: 1.3125rem;
@@ -76,6 +80,10 @@ footer {
   width: min(90%, 70.5rem);
 }
 
+.container--narrow {
+  max-width: 25rem;
+}
+
 /* Slideshow stuff 
 https://www.w3schools.com/howto/howto_js_slideshow.asp
 */
@@ -115,16 +123,6 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp
 }
 /* Slideshow stuff */
 
-fieldset {
-  font-family: var(--ff-primary);
-  border-color: var(--clr-light-300);
-  margin-bottom: 1em;
-}
-
-legend {
-  color: var(--clr-light-300);
-}
-
 /* grid gallery stuff 
 https://www.youtube.com/watch?v=705XCEruZFs
 */
@@ -138,6 +136,32 @@ https://www.youtube.com/watch?v=705XCEruZFs
 
 /* grid gallery stuff */
 
-.container--narrow {
-  max-width: 25rem;
+fieldset {
+  font-family: var(--ff-primary);
+  border-color: var(--clr-light-300);
+  margin-bottom: 1em;
+}
+
+legend {
+  color: var(--clr-light-300);
+}
+
+/* unvisited link */
+a:link {
+  color: var(--clr-link-unvisited);
+}
+
+/* visited link */
+a:visited {
+  color: var(--clr-link-visited);
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--clr-light-300);
+}
+
+/* selected link */
+a:active {
+  color: var(--clr-ligth-400);
 }
