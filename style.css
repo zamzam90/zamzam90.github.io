@@ -1,0 +1,113 @@
+:root {
+  /* custom variables here */
+  --clr-dark: #2c3e50;
+  --clr-light-100: #fff;
+  --clr-light-200: #bdc3c7;
+  --clr-light-300: #1abc9c;
+  --clr-ligth-400: #16a085;
+
+  --clr-link-unvisited: #2ecc71;
+  --clr-link-visited: #27ae60;
+
+  --ff-accent: "Permanent Marker", cursive;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-footer: "Yellowtail", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--clr-dark);
+  color: var(--clr-ligth-400);
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-ligth-400);
+  font-family: var(--ff-accent);
+  font-weight: 900;
+  line-height: 1;
+}
+
+footer > p {
+  font-family: var(--ff-footer);
+  color: var(--clr-light-200);
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header,
+section,
+footer {
+  padding: 1rem 0;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+section {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 1 auto;
+}
+
+/* start Link stuff */
+/* unvisited link */
+a:link {
+  color: var(--clr-link-unvisited);
+}
+
+/* visited link */
+a:visited {
+  color: var(--clr-link-visited);
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--clr-light-300);
+}
+
+/* selected link */
+a:active {
+  color: var(--clr-ligth-400);
+}
+/* Link stuff end*/
