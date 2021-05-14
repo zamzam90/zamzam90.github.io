@@ -12,12 +12,12 @@ var greet;
 if (hrs < 12) {
   greet = "Hyvää huomenta!";
 } else if (hrs >= 12 && hrs <= 16) {
-  greet = "Hyvää päivää";
+  greet = "Hyvää päivää!";
 } else if (hrs >= 17 && hrs <= 24) {
-  greet = "Hyvää iltaa";
+  greet = "Hyvää iltaa!";
 }
 document.getElementById("greeter").innerHTML =
-  greet + " tervetuloa kuvagalleriaan!";
+  greet + " tervetuloa kuvagalleriaan.";
 
 /* greeter stuff end */
 
