@@ -42,3 +42,37 @@ function slideShow() {
   setTimeout(slideShow, 2000); // Change image every 2 seconds
 }
 /* slideshow stuff end */
+
+/* Modal stuff..
+https://www.w3schools.com/howto/howto_css_modal_images.asp
+*/
+
+/* haetaan gridin kuvat htmlstä
+https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll */
+var imageGrid = document.querySelector(".image-grid");
+var gridImages = imageGrid.querySelectorAll("div.grid-image > img");
+// lisätään for loopilla jokaiseen kuvaan eventlistener
+for (x = 0; x < gridImages.length; x++) {
+  gridImages[x].addEventListener("click", openModal);
+}
+/* Tämä funktio avaa popupin kun kuvaa klikataan */
+function openModal() {
+  // Get the modal
+  var modal = document.getElementById("modal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("modal-image");
+  //var captionText = document.getElementById("caption");
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  //captionText.innerHTML = this.alt;
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("modal-close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+}
