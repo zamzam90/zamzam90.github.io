@@ -1,8 +1,6 @@
 /* kuvagalleria testailua 
 TODO:
-    -kun kuvaa klikkaa se aukeaa lightboxiin? https://www.w3schools.com/howto/howto_js_lightbox.asp
-        tai modaliin? https://www.w3schools.com/howto/howto_css_modal_images.asp
-
+    -modallissa next & prev napit joilla vaihtaa kuvaa?
 */
 
 /* Header greeter juttu */
@@ -60,8 +58,8 @@ function openModal() {
   // Get the modal
   var modal = document.getElementById("modal");
 
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = document.getElementById("myImg");
+  /* // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg"); */
   var modalImg = document.getElementById("modal-image");
   //var captionText = document.getElementById("caption");
   modal.style.display = "block";
