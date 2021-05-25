@@ -1,0 +1,508 @@
+:root {
+  --ff-primary: "Atma", cursive;
+  --ff-accent: "Waiting for the Sunrise", cursive;
+  --font-otsikko: 20px "Lato", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--ff-primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.container * img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+  height: 560px;
+}
+
+.split {
+  margin-inline: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.split > img {
+  min-width: 160px;
+  max-width: 640px;
+  height: auto;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+section p {
+  padding-inline: 3em;
+}
+
+fieldset {
+  height: 45rem;
+  margin-bottom: 1em;
+}
+
+footer > p {
+  font-family: var(--ff-accent);
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.varaus-linkki {
+  cursor: pointer;
+}
+
+/* Varauksen tulosteen muotoilu */
+.varaus-poyta {
+  margin-top: 1em;
+  border-collapse: collapse;
+}
+
+.varaus-poyta td,
+.varaus-poyta th {
+  border: 1px solid #ddd;
+}
+
+.varaus-poyta tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.varaus-poyta th {
+  background-color: #4caf50;
+  color: white;
+}
+/* Varauksen tulosteen muotoilu end */
+
+#nimi {
+  width: 150px;
+  font-family: var(--ff-primary);
+}
+#email {
+  width: 150px;
+  font-family: var(--ff-primary);
+}
+#numero {
+  width: 150px;
+  font-family: var(--ff-primary);
+}
+
+#palaute {
+  font-family: var(--ff-primary);
+}
+
+.nabbi {
+  font-family: var(--ff-primary);
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-top: 1em;
+}
+
+/* nav stuff */
+nav {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 4vh;
+  color: rgb(212, 212, 212);
+  background-color: black;
+}
+
+.nav {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div > ul {
+  padding: 0 1rem;
+  margin: 0;
+}
+
+/* navi jemmassa */
+.nav-links {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 10px 10px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in;
+}
+
+.nav-links li {
+  list-style: none;
+  opacity: 0;
+}
+
+.nav-links a {
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.burger div {
+  width: 1.6em;
+  height: 0.2em;
+  margin: 0.25rem;
+  background-color: rgb(212, 212, 212);
+  transition: all 0.3s ease;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+/* navi esiin kun aktiivinen*/
+.nav-active {
+  top: 4vh;
+  transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/* nav stuff end */
+
+/* Parallax scrolling stuff */
+.tausta-1,
+.tausta-2,
+.tausta-3,
+.tausta-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--ff-accent);
+  font-size: 4em;
+}
+
+.tausta-1 {
+  min-height: 100%;
+}
+
+.tausta-2 {
+  background-image: url("../resources/images/biitsi.jpg");
+  min-height: 42rem;
+}
+
+.tausta-3 {
+  background-image: url("../resources/images/biitsi.jpg");
+  min-height: 30rem;
+}
+
+.tausta-4 {
+  background-image: url("../resources/images/biitsi.jpg");
+  min-height: 18rem;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 0.5em;
+  letter-spacing: 10px;
+}
+
+.otsikko {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: var(--font-otsikko);
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .tausta-1,
+  .tausta-2,
+  .tausta-3,
+  .tausta-4 {
+    background-attachment: scroll;
+  }
+}
+
+video {
+  min-height: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1981px) {
+  video {
+    width: 100%;
+  }
+}
+/* End of parallax stuff */
+
+/* automatic Slideshow stuff */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  z-index: 1;
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Caption text */
+.text {
+  font-size: 1.5em;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* automatic Slideshowstuff ends */
+
+/* Modal stuff */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 8em; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.98); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 85%;
+  max-width: 1280px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 2em;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 1280px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+/* modal stuff end */
+
+/* manual slideshow */
+/* Position the image container (needed to position the left and right arrows) */
+.imageGalleryContainer {
+  position: relative;
+  margin-top: 1em;
+}
+
+/* Hide the images by default */
+.manualSlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  padding: 2px 16px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/* manual slideshow end */

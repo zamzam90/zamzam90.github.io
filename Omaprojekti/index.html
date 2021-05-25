@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/tyyli.css" />
+    <script type="text/javascript" src="./JS/koodi_index.js" defer></script>
+    <title>Matkatoimisto Sandaalimatkat Oy</title>
+  </head>
+  <body>
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+      <!-- The Close Button -->
+      <span class="modal-close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="modal-image" />
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
+    <div class="tausta-1">
+      <nav>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <div class="nav">
+        <ul class="nav-links">
+          <li>
+            <a href="#">Koti</a>
+          </li>
+          <li>
+            <a href="./esittely.html">Selaa matkoja</a>
+          </li>
+          <li>
+            <a href="./varaus.html">Varaa matkasi!</a>
+          </li>
+        </ul>
+      </div>
+      <video autoplay muted loop>
+        <source src="./resources/images/coverr.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">
+        <span class="border">SANDAALIMATKAT OY &copy;</span>
+      </div>
+    </div>
+    <section class="text-center">
+      <h2 class="otsikko">
+        Tervetuloa tutustumaan Sandaalimatkat Oy:n matkakohteisiin!
+      </h2>
+      <p>Nauttikaa näkemästänne ja tilatkaa matkanne meiltä!</p>
+      <h3 class="otsikko">Varaa matkasi jo täksi kesäksi!</h3>
+      <p>
+        Sivuillamme pääset ihailemaan kuvagalleriaa kohteistamme, varaamaan matkan ja näkemään
+        upeat esittelyt kohteistamme.
+      </p>
+      <h3 class="otsikko">Hyppää kanssamme unohtumattomaan seikkailuun!</h3>
+      <p>
+        Olemme täällä sinua varten, joten varaus-sivuilla on myös
+        yhteydenottolomake. Uskallathan kysyä meiltä mitä vain. Lähdetään
+        yhdessä seikkailulle!
+      </p>
+    </section>
+    <div class="tausta-2">
+      <div class="caption">
+        <span class="border">Mahtavia kohteita lyömättömän edulliseen hintaan!</span>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <fieldset>
+          <legend>
+            <h2 class="otsikko">Tutustu matkakohteisiimme:</h2>
+          </legend>
+          <div class="slideShow-container">
+            <div class="slide fade">
+              <img src="resources/images/kuva1.jpg" alt="Mäntsälän jylhänne." />
+              <div class="text text-center">Mäntsälän jylhänne.</div>
+            </div>
+            <div class="slide fade">
+              <img
+                src="resources/images/kuva2.jpg"
+                alt="Vantaan joen näkymää."
+              />
+              <div class="text text-center">Vantaan joen näkymää.</div>
+            </div>
+            <div class="slide fade">
+              <img
+                src="resources/images/kuva3.jpg"
+                alt="Iltanäkymä pääkaupungista Helsingistä."
+              />
+              <div class="text text-center">
+                Iltanäkymä pääkaupungista Helsingistä.
+              </div>
+            </div>
+            <div class="slide fade">
+              <img
+                src="resources/images/kuva4.jpg"
+                alt="Kerava beach ja meri."
+              />
+              <div class="text text-center">Kerava beach ja meri.</div>
+            </div>
+            <div class="slide fade">
+              <img
+                src="resources/images/kuva5.jpg"
+                alt="Vesiputouksen ihmettä ympäri Suomea."
+              />
+              <div class="text text-center">
+                Vesiputouksen ihmettä ympäri Suomea.
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+    <div class="tausta-4">
+      <div class="caption varaus-linkki">
+        <span class="border" onclick="location.href='varaus.html'"
+          >Varaa matkasi tästä!</span
+        >
+      </div>
+    </div>
+    <footer>
+      <p class="text-center">
+        Sandaalimatkat Oy - Designed by ProkramKroup Oyj &copy; - 2021
+      </p>
+    </footer>
+  </body>
+</html>
