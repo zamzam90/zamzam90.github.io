@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>001 Change backgroundcolor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="text-center">
+      <h2>
+        Paina nappia vaihtaaksesi satunnainen taustaväri tai valitse väri itse.
+      </h2>
+    </header>
+    <div class="container" id="tausta">
+      <div>
+        <button id="satunnainenVari" onclick="return randomColor();">
+          Satunnainen väri
+        </button>
+      </div>
+      <div>
+        <label for="manuaalinenVari">Valitse väri</label>
+        <input type="color" name="" id="manuaalinenVari" />
+      </div>
+      <div>
+        <button id="reset" onclick="return bgColorReset();">Nollaa</button>
+      </div>
+    </div>
+    <footer class="text-center">
+      <p>Sami Siltanen - 2021</p>
+    </footer>
+  </body>
+</html>
